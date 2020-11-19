@@ -25,6 +25,11 @@ class FirstViewController: UIViewController {
             destinationController.receive = sendtext1.text!
         }
     }
-
+    
+    @IBAction func backTo(for segue: UIStoryboardSegue) {
+        let src  = segue.source as! SecondViewController
+        receivemsg.text = src.sendtext2.text
+        dismiss(animated: true, completion: nil)
+    }
 }
 
